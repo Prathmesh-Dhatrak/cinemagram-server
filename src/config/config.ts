@@ -8,7 +8,7 @@ const env = process.env.NODE_ENV || 'dev';
 
 if (env === 'dev') {
   require('dotenv').config({
-    path: path.join(__dirname, '../../.env.development')
+    path: path.join(__dirname, '.env.development')
   })
 }
 
@@ -18,7 +18,7 @@ export default {
     port: process.env.PORT || 9002,
   },
   mongodb: {
-    uri: process.env.MONGODB_URI || 'mongodb://localhost:27017',
+    uri: process.env.MONGODB_URI || 'mongodb+srv://admin-prathmesh:remember_pass9860@cluster0.yjk0v.mongodb.net/?retryWrites=true&w=majority',
     dbName: process.env.MONGODB_DB_NAME || 'social-media'
   },
   session: {
