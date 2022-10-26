@@ -40,7 +40,6 @@ export default {
     }),
   },
   cors: {
-    origin: process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com",
     origin: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
