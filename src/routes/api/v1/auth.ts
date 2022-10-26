@@ -70,39 +70,39 @@ router.post(
 );
 
 //@route GET /api/v1/auth/facebook FACEBOOK AUTH
-router.get(
-  "/v1/auth/facebook",
-  passport.authenticate("facebook-auth", { scope: ["email", "public_profile"] })
-);
+// router.get(
+//   "/v1/auth/facebook",
+//   passport.authenticate("facebook-auth", { scope: ["email", "public_profile"] })
+// );
 
 //@route GET /api/v1/auth/facebook/callback FACEBOOK AUTH CALLBACK
-router.get(
-  "/v1/auth/facebook/callback",
-  passport.authenticate("facebook-auth", {
-    failureRedirect: `${
-      process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
-    }/auth/facebook/failed`,
-    successRedirect: `${
-      process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
-    }`,
-  })
-);
+// router.get(
+//   "/v1/auth/facebook/callback",
+//   passport.authenticate("facebook-auth", {
+//     failureRedirect: `${
+//       process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
+//     }/auth/facebook/failed`,
+//     successRedirect: `${
+//       process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
+//     }`,
+//   })
+// );
 
 //@route GET /api/v1/auth/github GITHUB AUTH
-router.get("/v1/auth/github", passport.authenticate("github-auth"));
+// router.get("/v1/auth/github", passport.authenticate("github-auth"));
 
 //@route GET /api/v1/auth/github/callback GITHUB AUTH
-router.get(
-  "/v1/auth/github/callback",
-  passport.authenticate("github-auth", {
-    failureRedirect: `${
-      process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
-    }/auth/github/failed`,
-    successRedirect: `${
-      process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
-    }`,
-  })
-);
+// router.get(
+//   "/v1/auth/github/callback",
+//   passport.authenticate("github-auth", {
+//     failureRedirect: `${
+//       process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
+//     }/auth/github/failed`,
+//     successRedirect: `${
+//       process.env.CLIENT_URL || "https://cinemagram.prathmeshdhatrak.com"
+//     }`,
+//   })
+// );
 
 //@route GET /api/v1/auth/github GITHUB AUTH
 router.get(
@@ -110,7 +110,7 @@ router.get(
   passport.authenticate("google-auth", { scope: ["email", "profile"] })
 );
 
-//@route GET /api/v1/auth/github/callback GITHUB AUTH
+//@route GET /api/v1/auth/google/callback google AUTH
 router.get(
   "/v1/auth/google/callback",
   passport.authenticate("google-auth", {
