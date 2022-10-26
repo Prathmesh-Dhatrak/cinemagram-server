@@ -9,6 +9,8 @@ export default function (app: Application, server: Server) {
       origin: config.cors.origin || "https://cinemagram.prathmeshdhatrak.com",
       methods: ["GET", "POST", "PATCH", "HEAD", "PUT", "DELETE"],
       credentials: true,
+      preflightContinue: true,
+      maxAge: 600,
     },
   });
 
@@ -46,3 +48,4 @@ export default function (app: Application, server: Server) {
     });
   });
 }
+
