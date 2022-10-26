@@ -7,7 +7,7 @@ export default function (app: Application, server: Server) {
   const io = require("socket.io")(server, {
     cors: {
       origin: config.cors.origin || "https://cinemagram.prathmeshdhatrak.com",
-      methods: ["GET", "POST", "PATCH", "HEAD", "PUT", "DELETE"],
+      methods: ["GET", "POST", "PATCH", "HEAD", "PUT", "DELETE", "OPTIONS"],
       credentials: true,
       preflightContinue: true,
       maxAge: 600,
