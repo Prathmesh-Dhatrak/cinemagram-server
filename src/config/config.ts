@@ -40,8 +40,8 @@ export default {
     }),
   },
   cors: {
-    origin: true,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    origin: "https://cinemagram.prathmeshdhatrak.com",
+    methods: ["GET", "POST", "PATCH", "HEAD", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
     preflightContinue: true,
     maxAge: 600,
