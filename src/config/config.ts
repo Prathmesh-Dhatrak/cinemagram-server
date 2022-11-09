@@ -2,15 +2,12 @@ import connectMongo from "connect-mongo";
 import session from "express-session";
 import mongoose from "mongoose";
 import path from "path";
+require("dotenv").config();
 
 const MongoStore = connectMongo(session);
-const env = process.env.NODE_ENV || "dev";
 
-if (env === "dev") {
-  require("dotenv").config({
-    path: path.join(__dirname, "../../.env.development"),
-  });
-}
+var env = process.env.NODE_ENV || "none";
+console.log(env);
 
 export default {
   server: {
@@ -40,7 +37,10 @@ export default {
     }),
   },
   cors: {
-    origin: "https://cinemagram.prathmeshdhatrak.com",
+    origin:
+      env === "dev"
+        ? "http://localhost:3000"
+        : "https://cinemagram.prathmeshdhatrak.com",
     methods: ["GET", "POST", "PATCH", "HEAD", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
     preflightContinue: true,
