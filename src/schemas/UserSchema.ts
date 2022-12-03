@@ -80,7 +80,7 @@ const UserSchema = new Schema({
                 const regex = /^[a-z]+_?[a-z0-9]{1,}?$/ig;
                 return regex.test(username);
             },
-            message: 'Username Must preceed with letters followed by _ or numbers eg: john23 | john_23'
+            message: 'Username Must precede with letters followed by _ or numbers eg: prath23 | prath_23'
         }
     },
     provider: {

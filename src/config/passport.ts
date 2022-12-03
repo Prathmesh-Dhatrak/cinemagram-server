@@ -1,7 +1,4 @@
 import User, { IUser } from '@/schemas/UserSchema';
-import FacebookStrategy from 'passport-facebook';
-import GitHubStrategy from 'passport-github';
-import GoogleStrategy from 'passport-google-oauth2';
 import LocalStrategy from 'passport-local';
 
 
