@@ -7,6 +7,8 @@
 </div>
 
 ## **How to install the backend and run locally ?**
+
+First clone the repo
 ```
 $ git clone https://github.com/Prathmesh-Dhatrak/cinemagram-server.git
 $ cd cinemagram-server
