@@ -27,5 +27,5 @@ PORT= "port number"
 ```
 Then try running
 ```
-npm start
+$ npm start
 ```
